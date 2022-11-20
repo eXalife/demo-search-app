@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="header__title">{{title}}</div>
+</header>
+
+<section class="content">
+  <form class="content__form">
+    <div class="content__form__search">
+      <img class="content__form__search__icon" src="assets/search.png" alt="search">
+      <input class="content__form__search__input" [(ngModel)]="inputText" [ngModelOptions]="{standalone: true}"
+        placeholder="SEARCH (Client Name / Policy Number)" (keyup)="filterCustomers()">
+    </div>
+    <div class="content__form__dropdown" [ngClass]="{'-open': filteredCustomers.length > 0}">
+      <div class="item" *ngFor="let customer of filteredCustomers" (click)="addSelected(customer)">
+        <div class="item__name">{{customer.firstName}} {{customer.lastName}}</div>
+        <div class="item__info">
+          <div class="item__column">
+            <img class="item__icon" src="assets/phone.png" alt="phone">
+            {{customer.phoneNo}}
+          </div>
+          <div class="item__column">
+            <img class="item__icon" src="assets/email.png" alt="email">
+            {{customer.email}}
+          </div>
+          <div class="item__column">
+            <img class="item__icon" src="assets/doc.png" alt="doc">
+            Policy No. {{customer.policyNo}} | {{customer.policyNo}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer__text">Insurance Co. 2022</div>
+</footer>
