@@ -8,7 +8,7 @@ Example searchable users
 "firstName": "Melvyn", "lastName": "Rasper", "policyNo": "0047410172"  
 "firstName": "Oswell", "lastName": "Morforth" "policyNo": "0026922322"  
 
-Full list of searchable users can be found in 'src/mock-data.ts'
+Full list of searchable users can be found in 'src/app/mock-data.ts'
 
 ## Development server
 
